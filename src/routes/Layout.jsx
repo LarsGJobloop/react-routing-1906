@@ -25,7 +25,9 @@ export function Layout() {
       </main>
 
       <footer>
-        <h2>Footer</h2>
+        <h2>
+          &copy; Lars Gunnar
+        </h2>
       </footer>
     </div>
   )

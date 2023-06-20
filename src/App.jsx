@@ -3,8 +3,11 @@ import {
   Routes,
   Route
 } from "react-router-dom"
-import { Layout } from "./routes/Laytout"
+import { Layout } from "./routes/Layout"
 import { AboutPage } from "./routes/about/AboutPage"
+import { LandingPage } from "./routes/LandingPage"
+import { ProjectsPage } from "./routes/projects/ProjectsPage"
+import { ProjectPage } from "./routes/projects/:projectID/ProjectPage"
 
 function App() {
   return (
@@ -12,14 +15,17 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Layout />}>
-          <Route index element={<h1>LandingPage</h1>} />
+          <Route index element={<LandingPage />} />
+
           <Route path="about" element={<AboutPage />} />
+          
+          <Route path="projects" element={<ProjectsPage />}>
+            <Route path=":projectID" element={<ProjectPage />} />
+          </Route>
 
-
-          <Route path="*" element={<h1>Error invalid url</h1>} />
         </Route>
 
-        <Route path="/test" element={<h1>This does not use the layout</h1>} />
+        <Route path="*" element={<h1>Error invalid url</h1>} />
 
       </Routes>
     </Router>
