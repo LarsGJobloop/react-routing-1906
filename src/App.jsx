@@ -4,8 +4,8 @@ import {
   Route
 } from "react-router-dom"
 import { Layout } from "./routes/Layout"
-import { AboutPage } from "./routes/about/AboutPage"
 import { LandingPage } from "./routes/LandingPage"
+import { AboutPage } from "./routes/about/AboutPage"
 import { ProjectsPage } from "./routes/projects/ProjectsPage"
 import { ProjectPage } from "./routes/projects/:projectID/ProjectPage"
 
