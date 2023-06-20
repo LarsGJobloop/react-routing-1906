@@ -16,6 +16,9 @@ export function Layout() {
             <li>
               <Link to="/about" >About</Link>
             </li>
+            <li>
+              <Link to="/projects" >Projects</Link>
+            </li>
           </ul>
         </nav>
       </header>

@@ -1,15 +1,6 @@
 import { useParams } from "react-router-dom"
 
-const myProjects = [
-  {
-    id: "first-project",
-    data: "This is my first Project"
-  },
-  {
-    id: "second-project",
-    data: "Here is my second try"
-  },
-]
+import { myProjects } from "../projectsData"
 
 export function ProjectPage() {
   const {projectID} = useParams()
