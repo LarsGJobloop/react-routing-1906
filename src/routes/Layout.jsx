@@ -1,15 +1,17 @@
+import style from "./layout.module.css"
+
 import { Outlet, Link } from "react-router-dom";
 
 export function Layout() {
   return (
-    <div>
-      <header>
+    <div className={style["layout"]}>
+      <header className={style["navbar"]}>
         <div>
           logo
         </div>
 
         <nav>
-          <ul>
+          <ul className={style["navigation-links"]}>
             <li>
               <Link to="/" >Home</Link>
             </li>
@@ -23,11 +25,11 @@ export function Layout() {
         </nav>
       </header>
 
-      <main>
+      <main className={style["main"]}>
         <Outlet />
       </main>
 
-      <footer>
+      <footer className={style["footer"]}>
         <h2>
           &copy; Lars Gunnar
         </h2>
